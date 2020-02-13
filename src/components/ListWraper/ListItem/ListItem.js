@@ -1,8 +1,18 @@
 import React from 'react';
+import ListItemCamera from './ListItemCamera/ListItemCamera'
 
-const ListItem = () => (
+const ListItem = ({
+    img_src,
+    earth_date,
+    name,
+    camera
+}) => (
     <li>
-        item
+        <img alt="test"  className="ListItem__image" src={img_src}></img>
+        <p>Ziemska data: {earth_date}</p>
+        <p>element kamery</p>
+        <ListItemCamera {...camera}/>
+        {name || 'item'}
     </li>
 );
 
